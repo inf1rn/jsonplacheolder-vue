@@ -1,2 +1,2 @@
-export { IUser } from "./api/IUser";
+export type { IUser } from "./api/IUser";
 export { UsersApiService } from "./api/UsersApiService";

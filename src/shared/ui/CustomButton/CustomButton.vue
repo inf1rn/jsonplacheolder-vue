@@ -22,18 +22,18 @@ const emit = defineEmits<{ (e: "click", data: MouseEvent): void }>();
 </template>
 <style lang="sass">
 .CustomButton
-    color: white
-    cursor: pointer
-    display: inline-block
-    padding: 4px 8px
-    border-radius: 4px
+  color: white
+  cursor: pointer
+  display: inline-block
+  padding: 4px 8px
+  border-radius: 4px
 
-    &:hover
-        opacity: 0.75
+  &:hover
+      opacity: 0.75
 
-    &-theme
-      &-accept
-        background-color: var(--app-color-blue)
-      &-cancel
-        background-color: var(--app-color-red)
+  &-theme
+    &-accept
+      background-color: var(--app-color-blue)
+    &-cancel
+      background-color: var(--app-color-red)
 </style>
