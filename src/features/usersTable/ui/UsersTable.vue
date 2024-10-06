@@ -6,12 +6,12 @@ import { useUserTableStore } from "@features/usersTable/model/useUserTableStore"
 const userTableStore = useUserTableStore();
 userTableStore.fetchTableData();
 
-const model = usersTableModel();
+const tableModel = usersTableModel();
 </script>
 <template>
   <CustomTable
     class="UsersTable"
-    :model="model"
+    :model="tableModel"
     :getRootItems="userTableStore.getRootItems"
     :getChildren="userTableStore.getChildren"
     :getLevel="userTableStore.getLevel"

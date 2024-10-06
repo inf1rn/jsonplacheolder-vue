@@ -1,5 +1,5 @@
 import { ITableCellModel } from "@/shared/ui/CustomTable/ITableCellModel";
-import { TUserTableRow } from "../model/IUserTableRow";
+import { TUserTableRow } from "@features/usersTable/model/IUserTableRow";
 
 export const usersTableModel = (): ITableCellModel<TUserTableRow>[] => {
   return [

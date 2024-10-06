@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import UpdatePostForm from "@features/updatePost/ui/UpdatePostForm.vue";
-import UsersTable from "@features/usersTable/ui/UsersTable.vue";
+import { UpdatePostForm } from "@features/updatePost";
+import { UsersTable } from "@features/usersTable";
 </script>
 <template>
   <div class="content">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Comment from "@entities/comments/ui/Comment.vue";
+import { Comment } from "@entities/comments";
 import CustomInput from "@shared/ui/CustomInput/CustomInput.vue";
 import CustomButton from "@shared/ui/CustomButton/CustomButton.vue";
 import CustomTextarea from "@shared/ui/CustomTextarea/CustomTextarea.vue";

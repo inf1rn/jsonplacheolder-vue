@@ -1,7 +1,7 @@
-import { IComment } from "@entities/comments/api/IComment";
-import { CommentsApiService } from "@entities/comments/api/CommentsApiService";
-import { IPost } from "@entities/posts/api/IPost";
-import { PostsApiService } from "@entities/posts/api/PostsApiService";
+import { IComment } from "@entities/comments";
+import { CommentsApiService } from "@entities/comments";
+import { IPost } from "@entities/posts";
+import { PostsApiService } from "@entities/posts";
 import { defineStore } from "pinia";
 import { ref } from "vue";
 
