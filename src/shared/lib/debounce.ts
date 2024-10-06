@@ -11,7 +11,6 @@ export const debounce = <F extends (...args: any[]) => any>(
     };
 
     clearTimeout(timeout);
-    if (timeout === undefined) fn.apply(this, args);
 
     timeout = setTimeout(later, wait);
   }
