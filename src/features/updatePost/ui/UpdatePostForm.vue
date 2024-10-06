@@ -3,20 +3,23 @@ import { Comment } from "@entities/comments";
 import CustomInput from "@shared/ui/CustomInput/CustomInput.vue";
 import CustomButton from "@shared/ui/CustomButton/CustomButton.vue";
 import CustomTextarea from "@shared/ui/CustomTextarea/CustomTextarea.vue";
-
 import { storeToRefs } from "pinia";
-
 import { useUpdatePostStore } from "@features/updatePost/model/useUpdatePostStore";
-import { ref } from "vue";
+import { debounce } from "@shared/lib/debounce";
+import { ref, watch } from "vue";
 
 const postId = ref<string>("");
 
 const updatePostStore = useUpdatePostStore();
 
-const { postsComments, currentPostCopy } = storeToRefs(updatePostStore);
+watch(
+  postId,
+  debounce(() => {
+    updatePostStore.setPost(postId.value ? +postId.value : null);
+  }, 500)
+);
 
-const onBlurPostId = () =>
-  updatePostStore.setPost(postId.value ? +postId.value : null);
+const { postsComments, currentPostCopy } = storeToRefs(updatePostStore);
 </script>
 <template>
   <div class="UpdatePostForm">
@@ -26,7 +29,6 @@ const onBlurPostId = () =>
         v-model="postId"
         placeholder="Идентификатор сообщения"
         type="number"
-        @blur="onBlurPostId"
       />
       <template v-if="currentPostCopy">
         <CustomInput
